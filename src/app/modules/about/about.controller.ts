@@ -12,6 +12,14 @@ const createAbout = catchAsync(async (req, res) => {
       data: result,
     });
   });
+  const getAbout = catchAsync(async (req, res) => {
+    const result = await AboutServices.getALLAboutFromDB();
+    sendResponse(res, {
+      message: 'Educations fetched successfully',
+      statusCode: StatusCodes.OK,
+      data: result,
+    });
+  });
   const updateAbout = catchAsync(async (req, res) => {
     const {id} = req.params;
     const result =
@@ -26,5 +34,5 @@ const createAbout = catchAsync(async (req, res) => {
     });
   });
   export const AboutControllers = {
-    createAbout,updateAbout
+    createAbout,updateAbout,getAbout
   };

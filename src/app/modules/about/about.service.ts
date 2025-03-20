@@ -6,6 +6,12 @@ const createAboutIntoDB = async (payload: TAbout) => {
     const result = await About.create(payload)
     return result;
   };
+
+  const getALLAboutFromDB = async () => {
+    const result= await About.find()
+    return result;
+  };
+
   const updateAboutFromDB = async (
     id: string,
     payload: Partial<TAbout>,
@@ -23,5 +29,5 @@ const createAboutIntoDB = async (payload: TAbout) => {
 
 
   export const AboutServices = {
-    createAboutIntoDB,updateAboutFromDB
+    createAboutIntoDB,updateAboutFromDB,getALLAboutFromDB 
   };
