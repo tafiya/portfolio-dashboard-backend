@@ -6,25 +6,14 @@ import { TService } from "./service.interface";
 
 const ServiceScheme = new Schema<TService>(
     {
-        name: {
+        num: {
             type: String,
             required: true,
-            unique: true,
         },
-        email: {
-            type: String,
-            required: [true, 'email is required'],
-            unique: true,
-            trim: true,
-        },
-        dateOfBirth: { type: Date, trim: true },
-        contactNo: {
+        title: {
             type: String,
         },
-        address: {
-            type: String,
-        },
-        details: {
+        description: {
             type: String,
             required: true,
         },

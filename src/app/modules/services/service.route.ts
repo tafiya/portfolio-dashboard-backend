@@ -4,8 +4,7 @@ import { ServiceControllers } from './service.controller';
 
 
 const router = express.Router();
-router.post('/', ServiceControllers.createService
-);
+router.post('/', ServiceControllers.createService);
 router.get("/", ServiceControllers.getAllServices)
 router.patch('/:id', ServiceControllers.updateService
 );

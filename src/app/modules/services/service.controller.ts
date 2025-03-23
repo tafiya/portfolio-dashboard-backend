@@ -6,8 +6,7 @@ import { ServiceServices } from "./service.service";
 
 
 const createService = catchAsync(async (req, res) => {
-    const result =
-        await ServiceServices.createServiceIntoDB(req.body);
+    const result = await ServiceServices.createServiceIntoDB(req.body);
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         message: 'Service created successfully',

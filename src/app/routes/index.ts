@@ -5,6 +5,7 @@ import { EducationRoutes } from '../modules/education/education.route';
 import { BlogRoutes } from '../modules/blogs/blog.route';
 import { ProjectRoutes } from '../modules/projects/project.route';
 import { ServiceRoutes } from '../modules/services/service.route';
+import { AuthRoutes } from '../modules/Auth/auth.route';
 
 
 const router = Router();
@@ -13,6 +14,10 @@ const moduleRoutes = [
   {
     path: '/about',
     route: AboutRoutes,
+  },
+  {
+    path: '/auth',
+    route: AuthRoutes,
   },
   {
     path: '/skills',
