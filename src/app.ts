@@ -11,7 +11,11 @@ const app: Application = express();
 //parsers
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: ['https://portfolio-dashboard-frontend-self.vercel.app'], credentials: true, }));
+app.use(cors({
+  origin: ['https://portfolio-dashboard-frontend-self.vercel.app',
+    'https://tafiyatul-jannat-portfolio.vercel.app'
+  ], credentials: true,
+}));
 
 // application routes
 app.use('/api', router);
